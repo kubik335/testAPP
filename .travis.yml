@@ -18,15 +18,14 @@ before_script:
     - sudo apt-get install php7.0-mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
-    - cd testAPP.iml
-    - ls -la
+    - mkdir logs
     #- cd /
     #- sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     #- sudo rm -f /var/www/index.html
     #- sudo php -f /var/www/db_conf.php
 
 script:
-    - mvn test -Dtest=LoginPageTest
+    - mvn test -Dtest=LoginPageTest > logs/log.txt
 
 
 #env:
