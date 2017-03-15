@@ -45,6 +45,7 @@ public class LoginPageTest {
 
     @BeforeClass
     public static void setup(){
+        //try
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //capabilities.setCapability("marionette", true);

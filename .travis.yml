@@ -49,7 +49,6 @@ before_script:
 script:
     - mvn test -Dtest=LoginPageTest > log.txt
 
-
 #env:
   #matrix:
   #- BROWSER=firefox
