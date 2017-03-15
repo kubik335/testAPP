@@ -47,7 +47,7 @@ before_script:
     #- sudo php -f /var/www/db_conf.php
 
 script:
-    - mvn test -Dtest=LoginPageTest > log.txt
+    - mvn test -Dtest=LoginPageTest
 
 
 #env:
