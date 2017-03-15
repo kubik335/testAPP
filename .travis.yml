@@ -1,0 +1,38 @@
+language: php
+
+sudo: required
+
+php:
+  - '5.6'
+
+before_script:
+    - sudo apt-get update
+    - sudo apt-get install apache2
+    - sudo service apache2 restart
+    - sudo apt-add-repository ppa:ondrej/php -y
+    - sudo apt-get update
+    - sudo apt-get install php7.0
+    - sudo apt-get install php7.0-mysql
+    - sudo phpenmod pdo_mysql
+    - sudo /etc/init.d/apache2 restart
+    #- cd /
+    #- sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
+    #- sudo rm -f /var/www/index.html
+    #- sudo php -f /var/www/db_conf.php
+
+script:
+    - mvn test -Dtest=LoginPageTest > target/log.txt
+
+
+env:
+  matrix:
+  - BROWSER=firefox
+
+after_script:
+
+
+#addons:
+  #artifacts:
+    #bucket: "kolpakova-s3"
+    #endpoint: "https://kolpakova-s3.s3-eu-central-1.amazonaws.com/"
+    #s3_region: "eu-central-1"
