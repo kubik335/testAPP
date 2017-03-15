@@ -45,7 +45,7 @@ public class LoginPageTest {
 
     @BeforeClass
     public static void setup(){
-
+// try it
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //capabilities.setCapability("marionette", true);
         capabilities.setBrowserName("chrome");
