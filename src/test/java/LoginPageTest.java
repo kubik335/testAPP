@@ -35,7 +35,7 @@ public class LoginPageTest {
 
     }
 
-    @Test(expected = TimeoutException.class)
+    @Test
     public void login2(){
         LoginPage loginPage = Factory.createPO();
         loginPage
