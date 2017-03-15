@@ -79,10 +79,10 @@ public class DriverManager {
         return webDriver;
     }
     public static void setting_up() {
-        System.setProperty("webdriver.geckodriver.driver", "src/main/java/driver/geckodriver");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("marionette", true);
-        webDriver = new FirefoxDriver();
+        System.setProperty("webdriver.chromedriver.driver", "src/main/java/driver/chromedriver.exe");
+        //DesiredCapabilities capabilities = new DesiredCapabilities();
+        //capabilities.setCapability("marionette", true);
+        webDriver = new ChromeDriver();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         webDriver.get("http://31.31.73.202/login.php");
     }
