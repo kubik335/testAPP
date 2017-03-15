@@ -52,8 +52,7 @@ public class LoginPageTest {
         capabilities.setPlatform(Platform.LINUX);
         capabilities.setCapability("URL", "http://31.31.73.202/login.php");
         Properties.setCapabilities(capabilities);
-
-        //DriverManager.setting_up();
+ //DriverManager.setting_up();
 
 
     }
