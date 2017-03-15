@@ -35,7 +35,7 @@ public class LoginPageTest {
 
     }
 
-    @Test
+    @Test(expected = TimeoutException.class)
     public void login2(){
         LoginPage loginPage = Factory.createPO();
         loginPage
@@ -45,7 +45,6 @@ public class LoginPageTest {
 
     @BeforeClass
     public static void setup(){
-        //try
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //capabilities.setCapability("marionette", true);
