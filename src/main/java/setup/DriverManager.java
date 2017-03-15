@@ -80,10 +80,10 @@ public class DriverManager {
     }
     public static void setting_up() {
         System.setProperty("webdriver.geckodriver.driver", "src/main/java/driver/geckodriver");
-        webDriver = new FirefoxDriver();
-        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("marionette", true);
+        webDriver = new FirefoxDriver();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         webDriver.get("http://31.31.73.202/login.php");
     }
 
