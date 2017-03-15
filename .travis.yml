@@ -47,7 +47,7 @@ before_script:
     #- sudo php -f /var/www/db_conf.php
 
 script:
-    - mvn test -Dtest=LoginPageTest
+    - mvn test -Dtest=LoginPageTest > log.txt
 
 
 #env:
@@ -55,8 +55,6 @@ script:
   #- BROWSER=firefox
 
 after_script:
-    - ls -la
-    - cd target
     - ls -la
     - cd screenshots
     - ls -la
