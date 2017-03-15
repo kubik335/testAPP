@@ -45,7 +45,7 @@ public class LoginPageTest {
     public static void setup(){
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        //capabilities.setCapability("marionette", true);
+        capabilities.setCapability("marionette", true);
         capabilities.setBrowserName("firefox");
         capabilities.setPlatform(Platform.LINUX);
         capabilities.setCapability("URL", "http://31.31.73.202/login.php");
