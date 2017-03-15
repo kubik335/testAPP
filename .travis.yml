@@ -18,6 +18,9 @@ before_script:
     - sudo apt-get install php7.0-mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
+    - ls -la
+    - cd src
+    - ls -la
     - chmod +x /src/main/java/driver/geckodriver
     - export PATH=$PATH:/src/main/java/driver/geckodriver
     #- cd /

@@ -79,6 +79,7 @@ public class DriverManager {
         return webDriver;
     }
     public static void setting_up() {
+        System.setProperty("webdriver.geckodriver.driver", "src/main/java/driver/geckodriver");
         webDriver = new FirefoxDriver();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         DesiredCapabilities capabilities = new DesiredCapabilities();
