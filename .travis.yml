@@ -18,7 +18,7 @@ before_script:
     - sudo apt-get install php7.0-mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
-    #- cd testAPP
+    - cd testAPP.iml
     - ls -la
     #- cd /
     #- sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
