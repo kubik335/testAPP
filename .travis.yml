@@ -18,8 +18,8 @@ before_script:
     - sudo apt-get install php7.0-mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
-    - mkdir logs
-    - ls -la
+    - chmod +x /src/main/java/driver/geckodriver
+    - export PATH=$PATH:/src/main/java/driver/geckodriver
     #- cd /
     #- sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     #- sudo rm -f /var/www/index.html
