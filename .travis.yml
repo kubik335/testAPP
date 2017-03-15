@@ -24,9 +24,9 @@ script:
     - mvn test -Dtest=LoginPageTest > target/log.txt
 
 
-env:
-  matrix:
-  - BROWSER=firefox
+#env:
+  #matrix:
+  #- BROWSER=firefox
 
 after_script:
 
