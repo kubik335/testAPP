@@ -8,12 +8,14 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.LoginPage;
 import setup.DriverManager;
 import setup.Factory;
 import setup.Properties;
 import java.io.*;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -44,12 +46,16 @@ public class LoginPageTest {
     @BeforeClass
     public static void setup(){
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        /**DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("marionette", true);
         capabilities.setBrowserName("firefox");
         capabilities.setPlatform(Platform.LINUX);
         capabilities.setCapability("URL", "http://31.31.73.202/login.php");
         Properties.setCapabilities(capabilities);
+         */
+        DriverManager.setting_up();
+
+
     }
 
     @AfterClass

@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Alexandra Kolpakova on 12.03.2017.
@@ -77,7 +78,13 @@ public class DriverManager {
         webDriver.get(Properties.getUrl());
         return webDriver;
     }
-
+    public static void setting_up() {
+        webDriver = new FirefoxDriver();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("marionette", true);
+        webDriver.get("http://31.31.73.202/login.php");
+    }
 
 
     /**
