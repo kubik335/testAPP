@@ -46,12 +46,12 @@ public class LoginPageTest {
     @BeforeClass
     public static void setup(){
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.LINUX);
-        capabilities.setCapability("URL", "http://31.31.73.202/login.php");
-        Properties.setCapabilities(capabilities);
-        //DriverManager.setting_up();
+        //DesiredCapabilities capabilities = new DesiredCapabilities();
+        //capabilities.setBrowserName("chrome");
+        //capabilities.setPlatform(Platform.LINUX);
+        //capabilities.setCapability("URL", "http://31.31.73.202/login.php");
+        //Properties.setCapabilities(capabilities);
+        DriverManager.setting_up();
 
 
     }
