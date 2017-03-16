@@ -35,7 +35,7 @@ public class LoginPageTest {
 
     }
 
-    @Test(expected = TimeoutException.class)
+    @Test
     public void login2(){
         LoginPage loginPage = Factory.createPO();
         loginPage
@@ -45,7 +45,7 @@ public class LoginPageTest {
 
     @BeforeClass
     public static void setup(){
-// try it
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //capabilities.setCapability("marionette", true);
         capabilities.setBrowserName("chrome");
