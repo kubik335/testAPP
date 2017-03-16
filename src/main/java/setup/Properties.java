@@ -16,9 +16,9 @@ public class Properties {
 
     public static DesiredCapabilities getCapabilities() { return capabilities; }
 
-    public static Platform getPlatform(){
+    /**public static Platform getPlatform(){
         return capabilities.getPlatform();
-    }
+    }*/
 
     public static String getBrowserName(){
         return capabilities.getBrowserName();

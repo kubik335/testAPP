@@ -48,7 +48,7 @@ public class LoginPageTest {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.WINDOWS);
+        //capabilities.setPlatform(Platform.WINDOWS);
         capabilities.setCapability("URL", "http://31.31.73.202/login.php");
         Properties.setCapabilities(capabilities);
         //DriverManager.setting_up();
