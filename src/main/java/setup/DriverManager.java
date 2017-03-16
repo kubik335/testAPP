@@ -58,7 +58,7 @@ public class DriverManager {
                         }
                          */
                         System.setProperty("webdriver.chrome.driver", "src/main/java/driver/chromedriver");
-                        webDriver = new ChromeDriver();
+                        webDriver = new ChromeDriver(Properties.getCapabilities());
                         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
                         break;
                     case "firefox":
@@ -81,8 +81,6 @@ public class DriverManager {
     }
     public static void setting_up() {
         System.setProperty("webdriver.chromedriver.driver", "src/main/java/driver/chromedriver");
-        //DesiredCapabilities capabilities = new DesiredCapabilities();
-        //capabilities.setCapability("marionette", true);
         webDriver = new ChromeDriver();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         webDriver.get("http://31.31.73.202/login.php");
