@@ -55,8 +55,7 @@ script:
 
 after_script:
     - ls -la
-    - cd screenshots
-    - ls -la
+    - cat log.txt
 
 
 #addons:
