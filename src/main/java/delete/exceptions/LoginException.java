@@ -1,4 +1,4 @@
-package exceptions;
+package delete.exceptions;
 
 /**
  * Created by Alexandra Kolpakova on 11.10.2016.

@@ -1,6 +1,5 @@
 package pages;
 
-import exceptions.LoginException;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -15,6 +14,7 @@ import static setup.DriverManager.webDriver;
  * Created by Alexandra Kolpakova on 12.03.2017.
  */
 public class LoginPage extends PageObject {
+
     @FindBy(name = "login")
     private WebElement username;
 
@@ -32,7 +32,6 @@ public class LoginPage extends PageObject {
 
     @Override
     public void synchronize() {
-
         driverManager.waitForElement(By.name("login"), 10);
         driverManager.waitForElement(By.name("password"), 10);
         driverManager.waitForElement(By.xpath("//button[@type=\"submit\"]"), 10);
@@ -58,12 +57,11 @@ public class LoginPage extends PageObject {
             System.out.println("Alert text is " + alertText);
             confirmationAlert.accept();
         } catch (TimeoutException e) {
+            e.getStackTrace();
         }
         return Factory.createPO();
     }
 
-    public LoginPage logoutButton(){
-        logout.click();
-        return Factory.createPO();
-    }
+
+
 }

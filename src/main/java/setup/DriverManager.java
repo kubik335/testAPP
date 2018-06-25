@@ -6,15 +6,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
 
 /**
  * Created by Alexandra Kolpakova on 12.03.2017.
@@ -80,10 +81,23 @@ public class DriverManager {
         return webDriver;
     }
     public static void setting_up() {
+        String content = null;
+        try
+        {
+            content = new Scanner(new File("new.txt")).next();
+            //System.out.println(content);
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("not found!");
+        }
+
         System.setProperty("webdriver.chromedriver.driver", "src/main/java/driver/chromedriver");
         webDriver = new ChromeDriver();
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        webDriver.get("http://31.31.73.202/login.php");
+        String newurl = "http://"+content+"/login.php";
+        //System.out.println(newurl);
+        webDriver.get(newurl);
     }
 
 
@@ -128,5 +142,6 @@ public class DriverManager {
         }
         webDriver.quit();
     }
+
 
 }

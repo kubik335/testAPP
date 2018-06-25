@@ -42,8 +42,8 @@ public class TestListener extends RunListener {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.YYYY_hh.mm_SSS");
 
-        new File("screenshots").mkdirs();
-        FileOutputStream outputStream = new FileOutputStream("screenshots/" +
+        new File("results/screenshots").mkdirs();
+        FileOutputStream outputStream = new FileOutputStream("results/screenshots/" +
                 dateFormat.format(new Date()) + ".png");
 
         outputStream.write(DriverManager.getWebDriver().getScreenshotAs(OutputType.BYTES));

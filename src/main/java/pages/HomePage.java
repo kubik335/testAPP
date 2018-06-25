@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import setup.Factory;
 import setup.PageObject;
 
 import static org.junit.Assert.assertEquals;
@@ -37,5 +38,15 @@ public class HomePage extends PageObject{
         assertEquals("Projects", projectsModule);
         assertEquals("Logout", logout);
         return this;
+    }
+
+    public AccountsPage goToAccounts(){
+        accountsModule.click();
+        return Factory.createPO();
+    }
+
+    public LoginPage logoutButton(){
+        logout.click();
+        return Factory.createPO();
     }
 }

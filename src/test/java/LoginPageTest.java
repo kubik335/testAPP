@@ -26,16 +26,16 @@ import java.util.concurrent.TimeUnit;
 public class LoginPageTest {
 
     @Test
-    public void login1(){
+    public void loginTest(){
         LoginPage loginPage = Factory.createPO();
         loginPage
                 .fillCredentials("admin", "admin")
                 .submitCredentials();
-        loginPage.logoutButton();
+        //loginPage.logoutButton();
 
     }
 
-    @Test
+    //@Test(expected = TimeoutException.class)
     public void login2(){
         LoginPage loginPage = Factory.createPO();
         loginPage
@@ -45,15 +45,7 @@ public class LoginPageTest {
 
     @BeforeClass
     public static void setup(){
-
-        //DesiredCapabilities capabilities = new DesiredCapabilities();
-        //capabilities.setBrowserName("chrome");
-        //capabilities.setPlatform(Platform.LINUX);
-        //capabilities.setCapability("URL", "http://31.31.73.202/login.php");
-        //Properties.setCapabilities(capabilities);
         DriverManager.setting_up();
-
-
     }
 
     @AfterClass
